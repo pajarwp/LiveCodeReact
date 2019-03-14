@@ -25,13 +25,13 @@ class AppAction extends Component {
           })
       }
 
-      isFiction = (listMovies) => {
-        return listMovies.Category === "fiction";
+      isAction = (listMovies) => {
+        return listMovies.Category === "action";
       }
 
   render() {
     const {listMovies} = this.state;
-    const filtered = listMovies.filter(this.isFiction)
+    const filtered = listMovies.filter(this.isAction)
     return (
   <div>    
       {filtered.map((item, key) =>{
